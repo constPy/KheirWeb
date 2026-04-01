@@ -52,7 +52,7 @@ nav {
 .nav-links a {
     color: #000000;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: opacity 0.3s;
@@ -273,7 +273,7 @@ nav {
 .social-links a {
     color: #000000;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: opacity 0.3s;
@@ -391,7 +391,7 @@ footer {
     }
 
     .social-links a {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     footer {
@@ -439,4 +439,15 @@ footer {
 .project-card:hover .project-image {
     transform: scale(1.02);
     filter: brightness(1.1);
+}
+
+/* Scroll to Top Button */
+
+
+
+.IconContainer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
 }
