@@ -328,9 +328,9 @@ footer {
 }
 
 /* Hover effect for project cards */
-.project-card:hover .project-image {
-    transform: scale(1.02);
-    filter: brightness(1.1);
+
+.project-image:active {
+    transform: scale(1.04);
 }
 
 /* Scroll to Top Button */
