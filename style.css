@@ -215,7 +215,7 @@ nav {
     letter-spacing: 1px;
 }
 
-/* Contact Section */
+/* contact Section */
 .NotionLink {
     margin-top: 5px;
     text-decoration: none;
@@ -232,7 +232,7 @@ nav {
 }
 
 .contact {
-    padding: 100px 0;
+    padding: 0px 0;
 }
 
 .contact-content {
@@ -442,7 +442,6 @@ footer {
 }
 
 /* Scroll to Top Button */
-
 
 
 .IconContainer {
