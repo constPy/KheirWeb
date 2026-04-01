@@ -110,7 +110,7 @@ nav {
 }
 
 .section-title {
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 40px;
 }
@@ -174,7 +174,7 @@ nav {
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 2px;
     transition: ease-out 0.2s;
 }
@@ -444,9 +444,32 @@ footer {
 /* Scroll to Top Button */
 
 
-.IconContainer {
+#scrollTopBtn {
     position: fixed;
     right: 0;
     bottom: 0;
     padding: 10px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.UpButton {
+    border: solid black 1px;
+    transition: ease-in-out 0.1s;
+}
+
+.UpButton:active {
+    transform: scale(0.8);
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Hidden state with slide down */
+.IconContainer.hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
 }
