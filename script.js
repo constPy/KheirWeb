@@ -71,22 +71,6 @@ window.onload = function() {
 };
 
 
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-window.addEventListener("scroll", () => {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollTopBtn.classList.add("show");
-        scrollTopBtn.classList.remove("hide");
-    } else {
-        scrollTopBtn.classList.add("hide");
-        scrollTopBtn.classList.remove("show");
-    }
-});
-
-scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
 function openMessageForm() {
   const form = document.getElementById("messageForm");
   form.classList.remove("hide");
@@ -142,4 +126,24 @@ function showNotification(id) {
   setTimeout(() => {
     note.classList.remove("show");
   }, 10000); // visible for 3 seconds
+}
+
+
+
+
+
+window.addEventListener("scroll", () => {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.classList.add("show");
+        scrollTopBtn.classList.remove("hide");
+    } else {
+        scrollTopBtn.classList.add("hide");
+        scrollTopBtn.classList.remove("show");
+    }
+});
+
+const scrollTopBtn = document.getElementById("GoUpBtn");
+
+function GoUp() {
+   document.getElementById("Top").scrollIntoView({behavior:"smooth"})
 }

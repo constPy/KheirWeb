@@ -38,7 +38,7 @@ nav {
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 600;
     letter-spacing: -1px;
 }
@@ -55,13 +55,14 @@ nav {
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: opacity 0.3s;
+    transition: ease-in-out 0.5s;
     cursor: pointer;
 }
 
 .nav-links a:hover,
 .nav-links a:active {
-    opacity: 0.5;
+    text-shadow:  0 0 5px white;
+    font-weight: 800;
 }
 
 /* Scroll Animations */
@@ -254,12 +255,14 @@ nav {
     text-decoration: none;
     border-bottom: 2px solid #000000;
     padding-bottom: 5px;
-    transition: opacity 0.3s;
+    transition: ease-in-out 0.3s;
     cursor: pointer;
 }
 
+.contact-email:active,
 .contact-email:hover {
-    opacity: 0.5;
+     text-shadow:  0 0 5px white;
+  
 }
 
 .social-links {
@@ -276,11 +279,12 @@ nav {
     font-size: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: opacity 0.3s;
+    transition: ease-in-out 0.3s;
 }
 
 .social-links a:hover {
-    opacity: 0.5;
+      text-shadow:  0 0 5px white;
+    font-weight: 680;
 }
 
 /* Footer */
@@ -327,16 +331,22 @@ footer {
     color: #ffffff;
 }
 
-/* Hover effect for project cards */
+
 
 .project-image:active {
     transform: scale(1.04);
 }
 
-/* Scroll to Top Button */
 
+.UpButton {
+    transition: ease-in-out 0.2s;
+    border: solid black 1.5px;
+     -webkit-user-drag: none; /* Prevents dragging in Chrome/Safari/Edge */
+    user-drag: none;
 
-#scrollTopBtn {
+}
+.IconContainer {
+     user-select: none;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -344,16 +354,17 @@ footer {
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.UpButton {
-    border: solid black 1px;
+.IconContainer {
     transition: ease-in-out 0.1s;
 }
 
+
 .UpButton:active {
-    transform: scale(0.8);
+    transform: scale(0.9);
 }
 
-#scrollTopBtn.show {
+
+.IconContainer.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -598,7 +609,7 @@ footer {
   color: #000;
 }
 
-/* Form content box with animation */
+/* Form content box */
 .form-content {
     font-family: CeraPro;
   background: #fff;
@@ -610,8 +621,6 @@ footer {
   padding: 20px;
   box-shadow:0 0 12px rgba(0, 0, 0, 0.555);
   font-family: Arial, sans-serif;
-
-  /* animation setup */
   opacity: 0;
   transform: translateY(-30px);
   animation: fadeSlideIn 0.4s ease forwards;
