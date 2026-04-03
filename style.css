@@ -811,12 +811,12 @@ footer {
 .calendar-username {
     font-size: 13px;
     letter-spacing: 2px;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .calendar-meta {
     font-size: 12px;
-    opacity: 0.6;
+    opacity: 0.7;
     letter-spacing: 1px;
 }
 
@@ -948,3 +948,66 @@ footer {
     text-align: center;
 }
 
+.github-streak-stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    border: 1px solid #000;
+    margin-bottom: 30px;
+}
+
+
+
+.streak-stat {
+    
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 6px;
+}
+
+.streak-divider {
+    width: 1px;
+    height: 40px;
+    background-color: #000;
+}
+
+.streak-value {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.streak-label {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+/* Mobile — keep horizontal but compress further */
+@media (max-width: 768px) {
+    .streak-stat {
+        align-self: center;
+        padding: 16px 10px;
+    }
+
+    .streak-value {
+        font-size: 15px;
+    }
+
+    .streak-label {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .streak-divider {
+        width: 1px;
+        height: 30px;
+    }
+}

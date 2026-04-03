@@ -208,3 +208,83 @@ async function loadGithubCalendar() {
 }
 
 loadGithubCalendar();
+
+async function loadGithubCalendar() {
+    const grid = document.getElementById("calendarGrid");
+    const totalEl = document.getElementById("totalContribs");
+
+    grid.innerHTML = `<div class="calendar-loading" style="grid-column: span 53;">Loading contributions...</div>`;
+
+    try {
+        const res = await fetch("https://github-contributions-api.jogruber.de/v4/constPy?y=last");
+        const data = await res.json();
+
+        const contributions = data.contributions;
+        const total = data.total["lastYear"] ?? data.total[new Date().getFullYear()];
+        totalEl.textContent = `${total.toLocaleString()} contributions in the last year`;
+
+        // --- Compute stats ---
+        let activeDays = 0;
+        let currentStreak = 0;
+        let longestStreak = 0;
+        let tempStreak = 0;
+
+        const today = new Date().toISOString().split("T")[0];
+
+        // Longest & active days (forward pass)
+        contributions.forEach(({ count }) => {
+            if (count > 0) {
+                activeDays++;
+                tempStreak++;
+                if (tempStreak > longestStreak) longestStreak = tempStreak;
+            } else {
+                tempStreak = 0;
+            }
+        });
+
+        // Current streak (reverse pass from today)
+        const sorted = [...contributions].reverse();
+        // If today has no contributions yet, allow starting from yesterday
+        const startIndex = sorted[0]?.date === today && sorted[0]?.count === 0 ? 1 : 0;
+        for (let i = startIndex; i < sorted.length; i++) {
+            if (sorted[i].count > 0) {
+                currentStreak++;
+            } else {
+                break;
+            }
+        }
+
+        // --- Render stats ---
+        document.getElementById("activeDays").textContent = activeDays;
+        document.getElementById("currentStreak").textContent = currentStreak + (currentStreak === 1 ? " day" : " days");
+        document.getElementById("longestStreak").textContent = longestStreak + (longestStreak === 1 ? " day" : " days");
+
+        // --- Render calendar grid ---
+        grid.innerHTML = "";
+        const firstDay = new Date(contributions[0].date).getDay();
+        for (let i = 0; i < firstDay; i++) {
+            const empty = document.createElement("div");
+            empty.style.width = "13px";
+            grid.appendChild(empty);
+        }
+
+        contributions.forEach(({ date, count, level }) => {
+            const cell = document.createElement("div");
+            cell.className = "cal-cell";
+            cell.dataset.level = level;
+            const formatted = new Date(date).toLocaleDateString("en-US", {
+                month: "short", day: "numeric", year: "numeric"
+            });
+            cell.dataset.tooltip = count === 0
+                ? `No contributions on ${formatted}`
+                : `${count} contribution${count > 1 ? "s" : ""} on ${formatted}`;
+            grid.appendChild(cell);
+        });
+
+    } catch (err) {
+        grid.innerHTML = `<div class="calendar-loading" style="grid-column: span 53;">Couldn't load calendar.</div>`;
+        console.error("GitHub calendar error:", err);
+    }
+}
+
+loadGithubCalendar();
