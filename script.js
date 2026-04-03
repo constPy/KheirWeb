@@ -147,3 +147,64 @@ const scrollTopBtn = document.getElementById("GoUpBtn");
 function GoUp() {
    document.getElementById("Top").scrollIntoView({behavior:"smooth"})
 }
+
+function updateGithubCards(isDark) {
+    const color = isDark ? 'ffffff' : '000000';
+    const subColor = isDark ? 'aaaaaa' : '555555';
+
+    document.getElementById('githubStatsImg').src =
+        `https://github-readme-stats.vercel.app/api?username=constPy&show_icons=true&hide_border=true&bg_color=00000000&title_color=${color}&text_color=${color}&icon_color=${color}&count_private=true`;
+
+    document.getElementById('githubStreakImg').src =
+        `https://streak-stats.demolab.com?user=constPy&hide_border=true&background=00000000&ring=${color}&fire=${color}&currStreakLabel=${color}&sideLabels=${color}&dates=${subColor}&stroke=ffffff20&currStreakNum=${color}&sideNums=${color}`;
+
+    document.getElementById('githubLangsImg').src =
+        `https://github-readme-stats.vercel.app/api/top-langs/?username=constPy&layout=compact&hide_border=true&bg_color=00000000&title_color=${color}&text_color=${color}&count_private=true`;
+}
+
+// GitHub Contribution Calendar
+async function loadGithubCalendar() {
+    const grid = document.getElementById("calendarGrid");
+    const totalEl = document.getElementById("totalContribs");
+
+    grid.innerHTML = `<div class="calendar-loading" style="grid-column: span 53;">Loading contributions...</div>`;
+
+    try {
+        const res = await fetch("https://github-contributions-api.jogruber.de/v4/constPy?y=last");
+        const data = await res.json();
+
+        const contributions = data.contributions; // array of { date, count, level }
+        const total = data.total["lastYear"] ?? data.total[new Date().getFullYear()];
+
+        totalEl.textContent = `${total.toLocaleString()} contributions in the last year`;
+
+        grid.innerHTML = "";
+
+        // GitHub calendar starts from Sunday — pad the first week
+        const firstDay = new Date(contributions[0].date).getDay(); // 0=Sun
+        for (let i = 0; i < firstDay; i++) {
+            const empty = document.createElement("div");
+            empty.style.width = "13px";
+            grid.appendChild(empty);
+        }
+
+        contributions.forEach(({ date, count, level }) => {
+            const cell = document.createElement("div");
+            cell.className = "cal-cell";
+            cell.dataset.level = level;
+            const formatted = new Date(date).toLocaleDateString("en-US", {
+                month: "short", day: "numeric", year: "numeric"
+            });
+            cell.dataset.tooltip = count === 0
+                ? `No contributions on ${formatted}`
+                : `${count} contribution${count > 1 ? "s" : ""} on ${formatted}`;
+            grid.appendChild(cell);
+        });
+
+    } catch (err) {
+        grid.innerHTML = `<div class="calendar-loading" style="grid-column: span 53;">Couldn't load calendar.</div>`;
+        console.error("GitHub calendar error:", err);
+    }
+}
+
+loadGithubCalendar();
