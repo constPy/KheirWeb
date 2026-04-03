@@ -176,7 +176,7 @@ async function loadGithubCalendar() {
         const contributions = data.contributions; // array of { date, count, level }
         const total = data.total["lastYear"] ?? data.total[new Date().getFullYear()];
 
-        totalEl.textContent = `${total.toLocaleString()} contributions in the last year`;
+        totalEl.textContent = `${total.toLocaleString()} Total Contributions`;
 
         grid.innerHTML = "";
 
@@ -221,7 +221,7 @@ async function loadGithubCalendar() {
 
         const contributions = data.contributions;
         const total = data.total["lastYear"] ?? data.total[new Date().getFullYear()];
-        totalEl.textContent = `${total.toLocaleString()} contributions in the last year`;
+        totalEl.textContent = `${total.toLocaleString()} Total contributions`;
 
         // --- Compute stats ---
         let activeDays = 0;
