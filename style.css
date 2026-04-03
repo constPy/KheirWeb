@@ -233,7 +233,7 @@ nav {
 }
 
 .contact {
-    padding: 0px 0;
+    padding: 90px 0 0 0;
 }
 
 .contact-content {
@@ -504,6 +504,8 @@ footer {
     .skills {
         grid-row: 3;
     }
+
+
 }
 
 
@@ -856,7 +858,6 @@ footer {
 
 .calendar-scroll-wrapper {
     overflow-x: auto;
-    padding-bottom: 10px;
 }
 
 .calendar-scroll-wrapper::-webkit-scrollbar {
