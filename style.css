@@ -111,7 +111,7 @@ nav {
 }
 
 .section-title {
-    font-size: 13px;
+    font-size: 13.5px;
     letter-spacing: 2px;
     margin-bottom: 40px;
 }
@@ -796,7 +796,7 @@ footer {
 
 /* GitHub Calendar */
 .github-calendar {
-    padding: 100px 0;
+    padding: 50px 0 100px 0;
 }
 
 .calendar-header {
@@ -823,6 +823,17 @@ footer {
 .calendar-scroll-wrapper {
     overflow-x: auto;
     padding-bottom: 10px;
+}
+
+.calendar-scroll-wrapper::-webkit-scrollbar{
+    background-color: #161b22;
+    height: 8px;
+} 
+
+.calendar-scroll-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgb(56, 56, 56);
+    border-radius: 20px;
+    
 }
 
 .calendar-grid {
@@ -863,7 +874,7 @@ footer {
 }
 
 .dark-mode .cal-cell:hover {
-    outline: 1px solid rgba(255,255,255,0.3);
+    outline: 1px solid rgba(236, 236, 236, 0.3);
 }
 
 /* Tooltip */
@@ -936,3 +947,4 @@ footer {
     padding: 40px 0;
     text-align: center;
 }
+
