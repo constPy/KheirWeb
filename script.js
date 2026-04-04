@@ -33,7 +33,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all elements except nav and logo
+/* Observe all elements except nav and logo
 document.addEventListener('DOMContentLoaded', () => {
 
     const elementsToAnimate = document.querySelectorAll('.hero p, .about-text');
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
 });
 });
+*/
 
 function toggleDarkMode() {
     // Toggle the class

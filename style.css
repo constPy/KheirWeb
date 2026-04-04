@@ -69,7 +69,7 @@ nav {
 /* Scroll Animations */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 1.0s ease-out;
 }
 
@@ -286,7 +286,7 @@ nav {
 }
 
 .social-links a:hover {
-    opacity: 0.6;
+    opacity: 0.;
 }
 
 /* Footer */
