@@ -50,19 +50,20 @@ nav {
 }
 
 .nav-links a {
+    font-weight: 800;
     color: #000000;
     text-decoration: none;
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.3s;
     cursor: pointer;
 }
 
 .nav-links a:hover,
 .nav-links a:active {
-    text-shadow: 0 0 5px white;
-    font-weight: 800;
+    opacity: 0.6;
+   
 }
 
 /* Scroll Animations */
@@ -271,9 +272,11 @@ nav {
     gap: 11.9px;
     margin-top: 40px;
     list-style: none;
+    font-weight: 800;
 }
 
 .social-links a {
+    
     color: #000000;
     text-decoration: none;
     font-size: 8px;
@@ -283,8 +286,7 @@ nav {
 }
 
 .social-links a:hover {
-    text-shadow: 0 0 5px white;
-    font-weight: 680;
+    opacity: 0.6;
 }
 
 /* Footer */
@@ -337,13 +339,18 @@ footer {
 
 .dark-mode .calendar-scroll-wrapper::-webkit-scrollbar-thumb {
     background-color: rgb(112, 112, 112);
-
 }
 
-
+.dark-mode .nav-links a {
+    font-weight: normal;
+}
 
 .project-image:active {
     transform: scale(1.04);
+}
+
+.dark-mode .social-links {
+     font-weight: normal;
 }
 
 
@@ -465,7 +472,7 @@ footer {
     .project-grid {
         grid-template-columns: 1fr;
         gap: 40px;
-        padding: 100px 0;
+        padding: px 0;
     }
 
     .project-image {
