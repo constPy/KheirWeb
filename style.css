@@ -331,6 +331,15 @@ footer {
     color: #ffffff;
 }
 
+.dark-mode .calendar-scroll-wrapper::-webkit-scrollbar {
+    background-color: #313131;
+}
+
+.dark-mode .calendar-scroll-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgb(112, 112, 112);
+
+}
+
 
 
 .project-image:active {
@@ -858,17 +867,17 @@ footer {
 
 .calendar-scroll-wrapper {
     overflow-x: auto;
+    
 }
 
 .calendar-scroll-wrapper::-webkit-scrollbar {
-    background-color: #161b22;
+    background-color: #e7e7e7;
     height: 8px;
 }
 
 .calendar-scroll-wrapper::-webkit-scrollbar-thumb {
-    background-color: rgb(56, 56, 56);
+    background-color: rgb(155, 155, 155);
     border-radius: 20px;
-
 }
 
 .calendar-grid {
@@ -1101,4 +1110,9 @@ footer {
         width: 1px;
         height: 30px;
     }
+
+    .calendar-scroll-wrapper::-webkit-scrollbar {
+    background-color: #b9b9b9;
+    height: 8px;
+}
 }
