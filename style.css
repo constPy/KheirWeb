@@ -285,8 +285,9 @@ nav {
     transition: ease-in-out 0.3s;
 }
 
+.social-links a:active,
 .social-links a:hover {
-    opacity: 0.;
+    opacity: 0.6;
 }
 
 /* Footer */
