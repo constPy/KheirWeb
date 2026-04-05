@@ -207,11 +207,14 @@ nav {
     transition: ease-out 0.2s;
 }
 
-
-
-
-.project-image {
-    width: 100%;
+.project-image-Web-Portfolio {
+    background-image: url(Photos/Custom_Web_Portfolio.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-color: transparent;
+     width: 100%;
     height: 400px;
     background-color: #000000;
     margin-bottom: 20px;
@@ -223,6 +226,27 @@ nav {
     letter-spacing: 2px;
     transition: ease-out 0.2s;
 }
+
+.project-image-Psits-Message-Me-App {
+     background-image: url(Photos/Message_Me_WebApp.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-color: transparent;
+     width: 100%;
+    height: 400px;
+    background-color: #000000;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: ease-out 0.2s;
+}
+
 
 .project-image:active {
     transform: scale(0.95);
