@@ -288,4 +288,14 @@ async function loadGithubCalendar() {
     }
 }
 
+/*Lightbox for PSITS CSU Send Me Message Project*/
+function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+}
+
 loadGithubCalendar();
