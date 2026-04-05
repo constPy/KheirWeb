@@ -246,6 +246,22 @@ nav {
     letter-spacing: 2px;
     transition: ease-out 0.2s;
 }
+
+.project-image-CSU-Library:hover{
+     transform: scale(1.03);
+}
+
+.project-image-Psits-Message-Me-App:hover{
+     transform: scale(1.03);
+}
+
+.project-image-Teachers-Day-WebApp:hover {
+     transform: scale(1.03);
+}
+
+.project-image-Web-Portfolio:hover {
+     transform: scale(1.03);
+}
 /*Stylesheet for the photo to view when clicked*/
 
 .lightbox {
