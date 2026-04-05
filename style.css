@@ -167,6 +167,49 @@ nav {
     padding-bottom: 110px;
 }
 
+.project-image-CSU-Library {
+    background-image: url(Photos/CSU_Library.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-color: transparent;
+     width: 100%;
+    height: 400px;
+    background-color: #000000;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: ease-out 0.2s;
+}
+
+.project-image-Teachers-Day-WebApp{
+    background-image: url(Photos/TeachersDay.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-color: transparent;
+     width: 100%;
+    height: 400px;
+    background-color: #000000;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: ease-out 0.2s;
+}
+
+
+
+
 .project-image {
     width: 100%;
     height: 400px;
