@@ -1009,6 +1009,7 @@ footer {
 
 .calendar-scroll-wrapper {
     overflow-x: auto;
+    overflow-y: visible;
 
 }
 
@@ -1029,6 +1030,7 @@ footer {
     gap: 3px;
     width: max-content;
     min-width: 100%;
+    padding-top: 30px;
 }
 
 .cal-cell {
