@@ -608,8 +608,7 @@ footer {
 
     .Active-Status-Dot-Indicator {
         color: rgb(5, 255, 17);
-        font-weight: 800;
-        font-size: 24px;
+        font-size: 12px;
         padding: 0;
         margin: 0;
         animation: Glow 1s ease-in-out infinite alternate;
