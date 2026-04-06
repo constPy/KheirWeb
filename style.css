@@ -63,7 +63,7 @@ nav {
 .nav-links a:hover,
 .nav-links a:active {
     opacity: 0.6;
-   
+
 }
 
 /* Scroll Animations */
@@ -175,7 +175,7 @@ nav {
     background-repeat: no-repeat;
     background-attachment: local;
     background-color: transparent;
-     width: 100%;
+    width: 100%;
     height: 400px;
     background-color: #000000;
     margin-bottom: 20px;
@@ -188,7 +188,7 @@ nav {
     transition: ease-out 0.2s;
 }
 
-.project-image-Teachers-Day-WebApp{
+.project-image-Teachers-Day-WebApp {
     border: black solid 1px;
     background-image: url(Photos/TeachersDay.png);
     background-size: cover;
@@ -196,7 +196,7 @@ nav {
     background-repeat: no-repeat;
     background-attachment: local;
     background-color: transparent;
-     width: 100%;
+    width: 100%;
     height: 400px;
     background-color: #000000;
     margin-bottom: 20px;
@@ -217,7 +217,7 @@ nav {
     background-repeat: no-repeat;
     background-attachment: local;
     background-color: transparent;
-     width: 100%;
+    width: 100%;
     height: 400px;
     background-color: #000000;
     margin-bottom: 20px;
@@ -232,13 +232,13 @@ nav {
 
 .project-image-Psits-Message-Me-App {
     border: black solid 1px;
-     background-image: url(Photos/Message_Me_WebApp.png);
+    background-image: url(Photos/Message_Me_WebApp.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: local;
     background-color: transparent;
-     width: 100%;
+    width: 100%;
     height: 400px;
     background-color: #000000;
     margin-bottom: 20px;
@@ -251,21 +251,22 @@ nav {
     transition: ease-out 0.2s;
 }
 
-.project-image-CSU-Library:hover{
-     transform: scale(1.03);
+.project-image-CSU-Library:hover {
+    transform: scale(1.03);
 }
 
-.project-image-Psits-Message-Me-App:hover{
-     transform: scale(1.03);
+.project-image-Psits-Message-Me-App:hover {
+    transform: scale(1.03);
 }
 
 .project-image-Teachers-Day-WebApp:hover {
-     transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .project-image-Web-Portfolio:hover {
-     transform: scale(1.03);
+    transform: scale(1.03);
 }
+
 /*Stylesheet for the photo to view when clicked*/
 
 .lightbox {
@@ -289,7 +290,7 @@ nav {
     object-fit: contain;
     border-radius: 4px;
     animation: fadeSlideIn 0.3s ease forwards;
-} 
+}
 
 
 .project-image:active {
@@ -374,7 +375,7 @@ nav {
 
 .contact-email:active,
 .contact-email:hover {
-    opacity:  0.6;
+    opacity: 0.6;
 }
 
 .social-links {
@@ -387,7 +388,7 @@ nav {
 }
 
 .social-links a {
-    
+
     color: #000000;
     text-decoration: none;
     font-size: 8px;
@@ -462,7 +463,7 @@ footer {
 }
 
 .dark-mode .social-links {
-     font-weight: normal;
+    font-weight: normal;
 }
 
 
@@ -611,18 +612,22 @@ footer {
         font-size: 24px;
         padding: 0;
         margin: 0;
-        animation: Glow 0.9s ease-in-out 1s infinite alternate;
+        animation: Glow 1s ease-in-out infinite alternate;
     }
 
-        @keyframes Glow {
-            from {
-                opacity: 0.6;
-            }
-    
-            to {
-                opacity: 100;
-            }
+    @keyframes Glow {
+        from {
+            
         }
+
+        to {
+            opacity: 100;
+            text-shadow: 0 0 7px rgb(86, 255, 94);
+            color: #75ff36;
+            
+        }
+    }
+
     .calendar-meta {
         font-size: 11px;
         opacity: 0.7;
@@ -1004,7 +1009,7 @@ footer {
 
 .calendar-scroll-wrapper {
     overflow-x: auto;
-    
+
 }
 
 .calendar-scroll-wrapper::-webkit-scrollbar {
@@ -1080,12 +1085,12 @@ footer {
 
 .cal-cell:hover {
     outline: 1px solid rgba(0, 0, 0, 0.3);
-   
+
 }
 
 .dark-mode .cal-cell:hover {
     outline: 1px solid rgba(236, 236, 236, 0.3);
-   
+
 }
 
 /* Tooltip */
@@ -1251,7 +1256,7 @@ footer {
     }
 
     .calendar-scroll-wrapper::-webkit-scrollbar {
-    background-color: #b9b9b9;
-    height: 8px;
-}
+        background-color: #b9b9b9;
+        height: 8px;
+    }
 }
