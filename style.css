@@ -367,7 +367,7 @@ nav {
     text-decoration: none;
     border-bottom: 2px solid #000000;
     padding-bottom: 5px;
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.2s;
     cursor: pointer;
 }
 
@@ -393,7 +393,7 @@ nav {
     font-size: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.2s;
 }
 
 .social-links a:active,
