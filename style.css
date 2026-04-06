@@ -660,6 +660,68 @@ footer {
         }
     }
 
+    /* Status dot tooltip wrapper */
+.status-dot-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.status-dot-wrapper::after {
+    content: attr(data-status);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: #000;
+    color: #fff;
+    font-size: 9px;
+    font-family: CeraPro, sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 100;
+}
+
+.status-dot-wrapper:hover::after,
+.status-dot-wrapper:focus::after,
+.status-dot-wrapper.tapped::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dark-mode .status-dot-wrapper::after {
+    background: #fff;
+    color: #000;
+}
+
+/* Status color variants — toggle via JS class */
+.status-dot-wrapper.status-busy .Active-Status-Dot-Indicator,
+.status-dot-wrapper.status-busy .Active-Status-Dot-Indicator-Text {
+    color: #f5c518;
+    animation: GlowYellow 1s ease-in-out infinite alternate;
+}
+
+.status-dot-wrapper.status-inactive .Active-Status-Dot-Indicator,
+.status-dot-wrapper.status-inactive .Active-Status-Dot-Indicator-Text {
+    color: #ff4444;
+    animation: GlowRed 1s ease-in-out infinite alternate;
+}
+
+@keyframes GlowYellow {
+    from { text-shadow: 0 0 0; color: #f5c518; }
+    to   { text-shadow: 0 0 7px #f5e294; color: #ffe066; }
+}
+
+@keyframes GlowRed {
+    from { text-shadow: 0 0 0; color: #ff4444; }
+    to   { text-shadow: 0 0 7px #ff9999; color: #ff6b6b; }
+}
+
 /* Responsive: Tablet/Laptop */
 @media (min-width: 769px) and (max-width: 1366px) {
     .about-content {

@@ -298,4 +298,12 @@ function closeLightbox() {
     document.getElementById('lightbox').classList.remove('active');
 }
 
+// Status dot tap tooltip (mobile)
+document.querySelectorAll('.status-dot-wrapper').forEach(dot => {
+    dot.addEventListener('click', () => {
+        dot.classList.add('tapped');
+        setTimeout(() => dot.classList.remove('tapped'), 2000);
+    });
+});
+
 loadGithubCalendar();
