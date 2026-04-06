@@ -617,11 +617,12 @@ footer {
 
     @keyframes Glow {
         from {
-            
+            text-shadow: 0 0 0;
+              color: rgb(5, 255, 17);
         }
 
         to {
-            opacity: 100;
+           
             text-shadow: 0 0 7px rgb(86, 255, 94);
             color: #75ff36;
             
