@@ -656,6 +656,10 @@ footer {
         grid-row: 3;
     }
 
+    .Active-Status-Dot-Indicator {
+        display: none;
+    }
+
 
 }
 
